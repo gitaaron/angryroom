@@ -42,6 +42,10 @@ if (app.get('env') === 'development') {
   app.use(errorHandler());
 }
 
+app.all('/caller', function(req, res) {
+    res.end('ok');
+});
+
 app.listen(app.get('port'), function () {
   console.log('Express server listening on port ' + app.get('port'));
 });
